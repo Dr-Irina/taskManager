@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button class="tablink" onclick="openPage('Oll', this, '#e7e2e2')" id="defaultOpen">Все задачи</button>
+<button class="tablink" onclick="openPage('Personal', this, '#e7e2e2')">Личные задачи</button>
+<button class="tablink" onclick="openPage('Works', this, '#e7e2e2')">Рабочие задачи</button>
+<!--<button class="tablink" onclick="openPage('Calendar', this, '#e7e2e2')">Календарь</button>-->
+<button class="tablink" onclick="openPage('addTask', this, '#e7e2e2')">Создать задачу</button>
+
+
+<div id="Oll" class="tabcontent">
+    <h2>Все задачи</h2>
+    <div class="taskDiv">
+        <ul id="taskList"></ul>
+    </div>
+</div>
+
+<div id="Personal" class="tabcontent">
+    <h2>Личные задачи</h2>
+    <div>
+        <ul id="personalTask"></ul>
+    </div>
+</div>
+
+<div id="Works" class="tabcontent">
+    <h2>Рабочие задачи</h2>
+    <div>
+        <ul id="workTask"></ul>
+    </div>
+</div>
+
+<div id="addTask" class="tabcontent">
+    <div class="wrapper">
+        <div class="form-wrapper">
+            <h1 align="center">Создать задачу</h1>
+            <form id="form">
+                <label for="name">Название задачи</label>
+                <input autofocus id="name" class="field" type="text" required>
+                <label for="endDate">Дедлайн</label>
+                <input id="endDate" type="datetime-local" class="field" required value="2019-04-15T12:00">
+                <div class="comment">
+                    <textarea id="description" placeholder="Описание задачи"></textarea>
+                </div>
+                <label for="type">Тип задачи</label>
+                <select id="type">
+                    <option>Личная задача</option>
+                    <option>Рабочая задача</option>
+                </select><br>
+                <button type="submit" id="createTask" class="but">Создать</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="choice_category.js"></script>
+<script src="add_task.js"></script>
+</body>
+</html>
