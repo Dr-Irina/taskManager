@@ -7,29 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<button class="tablink" onclick="openPage('Oll', this, '#e7e2e2')" id="defaultOpen">Все задачи</button>
+<button class="tablink" onclick="openPage('All', this, '#e7e2e2')" id="defaultOpen">Все задачи</button>
 <button class="tablink" onclick="openPage('Personal', this, '#e7e2e2')">Личные задачи</button>
 <button class="tablink" onclick="openPage('Works', this, '#e7e2e2')">Рабочие задачи</button>
-<!--<button class="tablink" onclick="openPage('Calendar', this, '#e7e2e2')">Календарь</button>-->
 <button class="tablink" onclick="openPage('addTask', this, '#e7e2e2')">Создать задачу</button>
 
 
-<div id="Oll" class="tabcontent">
-    <h2>Все задачи</h2>
+<div id="All" class="tabcontent">
+    <h2 align="center">Все задачи</h2>
     <div class="taskDiv">
         <ul id="taskList"></ul>
     </div>
 </div>
 
 <div id="Personal" class="tabcontent">
-    <h2>Личные задачи</h2>
+    <h2 align="center">Личные задачи</h2>
     <div>
         <ul id="personalTask"></ul>
     </div>
 </div>
 
 <div id="Works" class="tabcontent">
-    <h2>Рабочие задачи</h2>
+    <h2 align="center">Рабочие задачи</h2>
     <div>
         <ul id="workTask"></ul>
     </div>
@@ -43,7 +42,7 @@
                 <label for="name">Название задачи</label>
                 <input autofocus id="name" class="field" type="text" required>
                 <label for="endDate">Дедлайн</label>
-                <input id="endDate" type="datetime-local" class="field" required value="2019-04-15T12:00">
+                <input id="endDate" type="datetime-local" class="field" required value="2019-04-19T12:00">
                 <div class="comment">
                     <textarea id="description" placeholder="Описание задачи"></textarea>
                 </div>
